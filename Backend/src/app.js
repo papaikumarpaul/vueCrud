@@ -9,5 +9,6 @@ app.use("/api",route);
 app.use("/api",route);
 app.use("/api",route);
 app.use("/update",route); 
+app.use("/api",route);
 
 export { app };

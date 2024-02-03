@@ -1,4 +1,5 @@
  import express from "express";
+import { Deleted } from "../controller/deleted.controler.js";
 import { getAllData } from "../controller/featchData.controller.js";
 import { getoneData } from "../controller/getone.controller.js";
 import { creacted } from "../controller/index.controller.js";
@@ -9,4 +10,5 @@ import { updateData } from "../controller/update.controlles.js";
     route.get("/data",getAllData);
     route.get("/getone/:id",getoneData);
     route.put("/update/:id",updateData) // update data
+    route.delete("/delete/:id", Deleted) // delete
 
