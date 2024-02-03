@@ -2,9 +2,9 @@ import { User } from "../model/user.model.js";
  export const  getoneData=async(req,res)=>{
     try {
         let  id= req.params.id;
-        console.log(id);
+        // console.log(id);
         const userId=await User.findById(id);
-        console.log(userId);
+        // console.log(userId);
         if(!userId){
             return res.status(404).json({
                 error: 'User not found'
