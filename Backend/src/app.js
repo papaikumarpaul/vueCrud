@@ -6,4 +6,6 @@ const app= express();
 app.use(bodyperser.json());
 app.use(cors());
 app.use("/api",route);
+app.use("/api",route);
+app.use("api",route);
 export { app };
