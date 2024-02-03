@@ -1,1 +1,1 @@
-export const DB_name="crud";
+export const DB_NAME="CRUD";
