@@ -12,6 +12,7 @@ app.use("/update",route);
 app.use("/api",route);
 
 
- app.use("/api",route)
+ app.use("/api",route) // register
+  app.use("/api",route); // login
 
 export { app };
