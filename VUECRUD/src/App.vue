@@ -23,6 +23,9 @@ import { RouterLink, RouterView } from 'vue-router';
         <li class="nav-item">
           <RouterLink class="nav-link" to="/students">Student us </RouterLink>
         </li>
+         <li  class="nav-item">
+                <span class="nav-link">Papai Kumar Paul</span>
+              </li>
       </ul>
     </div>
 </div>
@@ -34,6 +37,3 @@ import { RouterLink, RouterView } from 'vue-router';
   <RouterView />
 </template>
 
-<style scoped>
-
-</style>

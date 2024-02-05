@@ -69,25 +69,23 @@ export default{
   },
   methods:{
     registerButton(){
-      //  if(this.model.employe.fullName&& this.model.employe.email& this.model.employe.password){
+   
         axios.post('http://localhost:8000/api/register',this.model.employe)
   .then((res)=>{
   // console.log(res.data)
   alert(res.data.message);
-
-  this.model.employe={
-    fullName:"",
-          email:"",
-          password:""
-  }
+  this.$router.push('/login')
+  // this.model.employe={
+  //   fullName:"",
+  //         email:"",
+  //         password:""
+  // }
   
   })
   .catch((err)=>{
     console.log(err);
   })
-      //  }else{
-      //   alert("Please fill out all fields");
-      //  }
+      
     }
   }
 }

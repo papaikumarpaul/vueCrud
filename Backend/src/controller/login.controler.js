@@ -11,7 +11,8 @@ try {
       }else{
         if(user.password===password){
             res.status(200).json({
-                message:"sucessFully"
+                message:"Login successful",
+                fullName:user.fullName
             })
                    }else{
                     res.status(404).json({
