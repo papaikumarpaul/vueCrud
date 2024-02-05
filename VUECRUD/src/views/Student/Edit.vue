@@ -10,13 +10,17 @@
     <input type="text" class="form-control" v-model="model.student.fullname" />
              </div>
              <div class="mb-3">
+   <label for="">Departments</label>
+   <input type="text" class="form-control" v-model="model.student.departments" />
+            </div>
+             <div class="mb-3">
     <label for="">Email</label>
     <input type="text" class="form-control" v-model="model.student.email" />
              </div>
              <div class="mb-3">
-    <label for="">Password</label>
-    <input type="text" class="form-control" v-model="model.student.password" />
-             </div>
+   <label for="">Phone</label>
+   <input type="text" class="form-control" v-model="model.student.phone" />
+            </div>
              <div class="mb-3">
    <button type="button" @click="updateStudentData" class="btn btn-primary" >Update</button>
              </div>
@@ -33,9 +37,11 @@
         studentId:"",
          model:{
              student:{
-             fullname:"",
-             email:"",
-             password:""
+                 
+            fullname:"",
+            departments:" ",
+            email:"",
+            phone:""
              }
          }
       }
@@ -51,8 +57,9 @@
   axios.get(`http://localhost:8000/api/getone/${this.studentId}`).then((value) => {
     // console.log(value.data);
     this.model.student.fullname=value.data.fullname;
-    this.model.student.email = value.data.email;
-    this.model.student.password=value.data.password;
+    this.model.student.departments = value.data.departments;
+    this.model.student.email=value.data.email;
+    this.model.student.phone=value.data.phone;
   }).catch((err)=>{
 console.log(err)
   })
@@ -63,9 +70,10 @@ updateStudentData(studentId){
     //  console.log(res.data)
      alert(res.data.message);
      this.model.student={
-         fullname:"",
-             email:"",
-             password:" "
+            fullname:"",
+            departments:" ",
+            email:"",
+            phone:""
      }
  }).catch((err)=>console.log(err))
          }

@@ -10,24 +10,33 @@
         <table class="table table-bordered">
          <thead>
             <tr>
-                <th>Id</th>
+                <!-- <th>Id</th> -->
                 <th>FullName</th>
+                <th>Departments</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Action</th>
             </tr>
          </thead>
          <tbody>
             <tr v-for="(student,index) in this.students">
-              <td>
+              <!-- <td>
                 {{ student._id }}
-              </td>
+              </td> -->
+              
               <td>
                 {{ student.fullname }}
               </td>
               <td>
+                {{ student.departments }}
+              </td>
+              <td>
                 {{ student.email }}
               </td>
-                <td class="">
+              <td>
+                {{ student.phone }}
+              </td>
+                <td class=" btn-toolbar ms-auto mb-2 gap-4 me-3">
                   <RouterLink :to="{path:'/students/'+student._id+'/edit'}" class="btn btn-outline-primary " >Edit</RouterLink>
                   <button type="button" @click="deletedButton(student._id)" class="btn btn-danger">Deleted</button>
                 </td>

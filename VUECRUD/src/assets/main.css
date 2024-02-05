@@ -1,2 +1,8 @@
 @import './base.css';
-@import 'bootstrap'
+@import 'bootstrap';
+/* @import 'mdb'; */
+/* @import 'mdb-ui-kit'; */
+/* // Import the CSS file from mdb-ui-kit in your main JavaScript file */
+@import 'mdb-ui-kit/css/mdb.min.css';
+
+

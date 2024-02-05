@@ -9,7 +9,10 @@ try {
     if(!user.fullName || !user.email || !user.password){
         return res.status(400).send({message:"please fill all fields"});
     }
-     res.status(200).json(user);
+     res.status(200).json(({
+        data:user,
+        message:"Register successfully"
+     }));
    
 
 } catch (error) {

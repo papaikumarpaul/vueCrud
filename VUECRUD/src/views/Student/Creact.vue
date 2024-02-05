@@ -7,15 +7,19 @@
         <div class="card-body">
             <div class="mb-3">
    <label for="">FullName</label>
-   <input type="text" class="form-control" v-model="model.student.fullname" />
+   <input type="text" class="form-control" v-model="model.student.fullname" required/>
+            </div>
+            <div class="mb-3">
+   <label for="">Departments</label>
+   <input type="text" class="form-control" v-model="model.student.departments" required />
             </div>
             <div class="mb-3">
    <label for="">Email</label>
-   <input type="text" class="form-control" v-model="model.student.email" />
+   <input type="text" class="form-control" v-model="model.student.email" required/>
             </div>
             <div class="mb-3">
-   <label for="">Password</label>
-   <input type="text" class="form-control" v-model="model.student.password" />
+   <label for="">Phone</label>
+   <input type="text" class="form-control" v-model="model.student.phone" required />
             </div>
             <div class="mb-3">
   <button type="button" @click="saveButton" class="btn btn-primary" >Save</button>
@@ -32,9 +36,11 @@ export default{
      return{
         model:{
             student:{
+                
             fullname:"",
+            departments:" ",
             email:"",
-            password:""
+            phone:""
             }
         }
      }
@@ -45,9 +51,11 @@ axios.post('http://localhost:8000/api/creacted',this.model.student).then(res=>{
     console.log(res.data)
     alert(res.data.message);
     this.model.student={
+            
         fullname:"",
+            departments:" ",
             email:"",
-            password:" "
+            phone:""
     }
 }).catch((err)=>console.log(err))
         }
