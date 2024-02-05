@@ -11,7 +11,10 @@
             })
         }
       const saveData=  await userData.save();
-      res.status(200).json(saveData);
+      res.status(200).json({
+        data:saveData,
+        message:"Creacted is a Successfull."
+      });
 
     } catch (error) {
         res.status(500).json({

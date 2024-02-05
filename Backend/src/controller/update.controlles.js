@@ -12,7 +12,10 @@ import { User } from "../model/user.model.js";
         }
          const update= await User.findByIdAndUpdate(id,req.body,{new:true});
         //  console.log(update);
-         res.status(200).json(update);
+         res.status(200).json({
+            user:update,
+            message:"Update successful"
+         });
          
     } catch (error) {
         res.status(500).json({
