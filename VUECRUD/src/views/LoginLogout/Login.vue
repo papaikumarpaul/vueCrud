@@ -1,29 +1,29 @@
 <template>
     <div>
-        <section className="vh-100 bg-image"
+        <section class="vh-100 bg-image"
  >
-  <div className="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div className="container h-100">
-      <div className="row d-flex justify-content-center align-items-center h-100">
-        <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-          <div className="card">
-            <div className="card-body p-5">
-              <h2 className="text-uppercase text-center mb-5">Login Page</h2>
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Login Page</h2>
 
               <form >
-                <div className="form-outline mb-4">
-                  <input type="email" id="email" className="form-control form-control-lg" v-model="model.employe.email"/>
-                  <label className="form-label" htmlFor="email">Your Email</label>
+                <div class="form-outline mb-4">
+                  <input type="email" id="email" class="form-control form-control-lg" v-model="model.employe.email"/>
+                  <label class="form-label" htmlFor="email">Your Email</label>
                 </div>
 
-                <div className="form-outline mb-4">
-                  <input type="password" id="password" className="form-control form-control-lg" v-model="model.employe.password"/>
-                  <label className="form-label" htmlFor="password">Password</label>
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" class="form-control form-control-lg" v-model="model.employe.password"/>
+                  <label class="form-label" htmlFor="password">Password</label>
                 </div>
 
-                <div className="d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
                   <button type="submit"
-                    className="btn btn-success btn-block btn-lg gradient-custom-4 text-body" @click.prevent="loginButton">Login</button>
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" @click.prevent="loginButton">Login</button>
                 </div>
               </form>
 
